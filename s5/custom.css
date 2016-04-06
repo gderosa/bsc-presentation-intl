@@ -1,0 +1,113 @@
+
+
+/* 
+compare to ui/default/pretty.css, where:
+  .slide h1 {
+    text-tramsform:capitalize;
+    font-size: 150%;
+  }  
+*/
+.slide h1 {text-transform:none;}
+.slide h1.longtitle { /* new classes avoid overflowing */
+  font-size:125%; 
+}
+.slide h1.vlongtitle { /* new classes avoid overflowing */
+  font-size:100%; 
+}
+/* */
+
+
+/* strong {
+  font-style: normal;
+  font-weight: normal;
+  text-decoration: underline;
+} */
+
+/*em {
+  font-style: normal;
+}*/
+
+/*.info {
+  font-style: italic;
+  font-size: 92%;
+}*/
+
+.video-options {
+  font-size: 0.4em; 
+  font-family: Helvetica, Arial, sans-serif;
+  font-style: italic;
+/*  margin: 0.1em 0;   */
+/*  padding: 0; */
+}
+
+
+
+/* .preview-with-showclose {
+  margin-top:24px; 
+} */
+
+.hVlog {
+  margin:0;
+  padding:0;
+}
+
+div.hVlog p {
+  margin:0.3em 0;
+}
+
+.hVlog a.hVlogTarget img {
+  padding:0;
+  margin:0;
+}
+
+
+img.formula,
+img.formula1,
+img.formula15,
+img.formula2,
+img.formula25,
+img.formula3,
+img.formula4  
+{
+  margin: 0 0.35em;
+  vertical-align: middle;
+}
+
+img.formula, img.formula1 {height: 1.1em;}
+img.formula15             {height: 1.66em;}
+img.formula2              {height: 2.2em;}
+img.formula25             {height: 2.77em;}
+img.formula3              {height: 3.3em;}
+img.formula4              {height: 4.4em;}
+
+a img {
+  border: 1px dashed;
+}
+
+img.tools-logo {
+  height:2.1em;
+}
+
+li img {vertical-align:middle;}
+
+ul li {
+  /* list-style:none; */
+  margin:0; 
+  padding:0; 
+  /* font-size:90%; */
+}
+
+ul li p {
+  margin:0.4em 0 0 0;
+  padding:0;
+}
+
+ul ol {
+  list-style-position: inside;
+}
+
+.part {
+  text-align:center; 
+  margin-top:4em;
+  font-size:130%;
+}

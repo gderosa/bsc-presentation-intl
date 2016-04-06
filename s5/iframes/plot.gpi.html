@@ -1,0 +1,49 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<html>
+<head>
+<title>~/dev/tesi/2dwell/gp4.3/2Dwell.orig/plot.gpi.html</title>
+<meta name="Generator" content="Vim/7.1">
+<meta http-equiv="content-type" content="text/html; charset=UTF-8">
+</head>
+<body bgcolor="#ffffff" text="#000000"><font face="monospace">
+<font color="#a52a2a"><b>set</b></font>&nbsp;<font color="#2e8b57"><b>multiplot</b></font><br>
+<font color="#a52a2a"><b>set</b></font>&nbsp;<font color="#2e8b57"><b>samples</b></font>&nbsp;<font color="#ff00ff">200</font><br>
+<font color="#a52a2a"><b>set</b></font>&nbsp;<font color="#2e8b57"><b>isosamples</b></font>&nbsp;<font color="#ff00ff">100</font><br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; <font color="#0000ff">#set hidden3d</font><br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; <font color="#a52a2a"><b>set</b></font>&nbsp;<font color="#2e8b57"><b>pm3d</b></font>&nbsp;corners2color c1<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; <font color="#0000ff">#set style line 100 lt 2 lw 0.5</font><br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; <font color="#0000ff">#unset hidden3d</font><br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; <font color="#0000ff">#set surf</font><br>
+<br>
+<br>
+<font color="#0000ff"># a patch was applied to Gnuplot 4.2</font><br>
+<font color="#0000ff"># <a href="http://sourceforge.net/tracker/index.php?func=detail&amp;aid=1646788&amp;group_id=2055&amp;atid=302055">http://sourceforge.net/tracker/index.php?func=detail&amp;aid=1646788&amp;group_id=2055&amp;atid=302055</a></font><br>
+<font color="#0000ff"># at the moment, this functionality's not included in the official release</font><br>
+<br>
+<font color="#0000ff">#splot '+' using 1:2:(abs(psi($1,$2))**2):(arg(psi($1,$2))) w pm3d at s</font><br>
+<br>
+<font color="#0000ff">## HEY! </font><br>
+<br>
+<font color="#0000ff">#&nbsp;&nbsp;&nbsp;&nbsp;||</font><br>
+<font color="#0000ff">#&nbsp;&nbsp;&nbsp;&nbsp;\/</font><br>
+<br>
+<font color="#0000ff"># feature under heavy development: maybe you need '+', or</font><br>
+<font color="#0000ff"># maybe you need '++' </font><br>
+<font color="#0000ff"># :-P</font><br>
+<font color="#0000ff"># <a href="http://sourceforge.net/tracker/index.php?func=detail&amp;aid=1872528&amp;group_id=2055&amp;atid=302055&nbsp;&nbsp">http://sourceforge.net/tracker/index.php?func=detail&amp;aid=1872528&amp;group_id=2055&amp;atid=302055&nbsp;&nbsp</a>; (message from sfeam @ 2008-01-24 06:43 )</font><br>
+<br>
+<font color="#a52a2a"><b>splot</b></font>&nbsp;<font color="#0000ff">'++'</font>&nbsp;<font color="#2e8b57"><b>using</b></font>&nbsp;<font color="#ff00ff">1</font>:<font color="#ff00ff">2</font>:(<font color="#2e8b57"><b>abs</b></font>(psi($<font color="#ff00ff">1</font>,$<font color="#ff00ff">2</font>))**<font color="#ff00ff">2</font>):(<font color="#2e8b57"><b>arg</b></font>(psi($<font color="#ff00ff">1</font>,$<font color="#ff00ff">2</font>))) <font color="#2e8b57"><b>w</b></font>&nbsp;<font color="#2e8b57"><b>pm3d</b></font>&nbsp;<font color="#2e8b57"><b>at</b></font>&nbsp;s<br>
+<br>
+<br>
+<br>
+<br>
+<font color="#a52a2a"><b>set</b></font>&nbsp;<font color="#2e8b57"><b>isosamples</b></font>&nbsp;<font color="#ff00ff">15</font><br>
+<font color="#a52a2a"><b>set</b></font>&nbsp;<font color="#2e8b57"><b>samples</b></font>&nbsp;<font color="#ff00ff">85</font><br>
+<font color="#0000ff">#set hidden3d</font><br>
+<font color="#a52a2a"><b>unset</b></font>&nbsp;<font color="#2e8b57"><b>ztics</b></font><br>
+<font color="#0000ff">#set style line 6 lw 0.1</font><br>
+<font color="#a52a2a"><b>splot</b></font>&nbsp;<font color="#2e8b57"><b>abs</b></font>(psi(<font color="#2e8b57"><b>x</b></font>,<font color="#2e8b57"><b>y</b></font>))**<font color="#ff00ff">2</font>&nbsp;<font color="#2e8b57"><b>w</b></font>&nbsp;<font color="#2e8b57"><b>dots</b></font>&nbsp;<font color="#2e8b57"><b>lt</b></font>&nbsp;<font color="#ff00ff">7</font>&nbsp;<br>
+<font color="#a52a2a"><b>unset</b></font>&nbsp;<font color="#2e8b57"><b>multiplot</b></font><br>
+<font color="#a52a2a"><b>set</b></font>&nbsp;<font color="#2e8b57"><b>ztics</b></font><br>
+</font></body>
+</html>
