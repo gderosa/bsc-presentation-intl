@@ -80,31 +80,33 @@
           <li>2-dim particle in a box</li>
         </ul>
       </li>
-      <li>"Usual" illustration in position space but...</li>
+      <li>&ldquo;Usual&rdquo; illustration in position space but...</li>
     </ul>
   </div>
 
   <div class="slide">
-    <h1>Intro</h1>
-    <ul>
-      <li>Tipicamente, si rappresenta il <strong>modulo quadro</strong> della funzione d’onda</li>
-      <li class="incremental">In questo lavoro è rappresentata graficamente la funzione <strong>complessa</strong></li>
-    </ul>
-  </div>
-
-  <div class="slide">
-    <h1>Perché è importante?</h1>
+    <h1>Graphical representation</h1>
     <ul class="incremental">
+      <li>|&psi;(x)|<sup>2</sup> ? <em>but some loss of information...</em> </li>
+      <li>Re, Im ? <em>but you need two graphs... counterintuitive...</em></li>
+      <li>|&psi;|<sup>2</sup>, <em>arg </em>&psi; in one graphics would likely express the essential physics!</li>
+    </ul>
+  </div>
+
+  <div class="slide">
+    <h1>Why <em>arg</em> matters</h1>
+    <ul class="incremental">
+      <li class="incremental">A <em>global</em> phase factor is irrelevant but phase shifts <em>are relevant</em></li>
       <li>
-        Un semplice esempio
+        Two wavefunctions
         <p><img src="img/eq/sameModulus.gif" class="formula incremental"/></p>
       </li>
-      <li>stesso modulo (quadro)</li>
-      <li>stessa distribuzione di probabilità per la posizione</li>
+      <li>same (squared) modulus</li>
+      <li>same position probability distribution</li>
       <li>
-        <strong>diversa</strong> distribuzione di probabilità per il momento lineare
+        <strong>not same</strong> momentum!
         <ul>
-          <li class="info">proprietà di traslazione della trasformata di Fourier...</li>
+          <li class="info">Fourier transform, shift property</li>
           <p><img src="img/eq/momentumShift.gif" class="formula2 incremental"/></p>
         </ul>
       </li>
@@ -112,16 +114,16 @@
   </div>
 
   <div class="slide">
-    <h1>Perché è importante?</h1>
+    <h1>Why <em>arg</em> matters (continued)</h1>
     <ul>
       <li> ...
         <ul>
           <li class="info">
-            proprietà di traslazione della trasformata di Fourier
-            <ul style="font-size:180%;">
+            <em>Fourier transform, momentum shift</em>
+            <ul style="font-size:180%;margin-top:0.8em">
               <li><img src="img/eq/momentumShift.gif" class="formula2"/></li>
               <li><img src="img/eq/momentumShift_int.gif" class="formula3"/></li>
-              <li><img src="img/eq/momentumShift_squareMod.gif" class="formula1" style="width:70%;"/></li>
+              <li style="font-size:70%;">Generally, <img src="img/eq/momentumShift_squareMod.gif" style="height:1em"/></li>
             </ul>
           </li>
         </ul>
