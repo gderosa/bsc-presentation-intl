@@ -1,16 +1,16 @@
 <!DOCTYPE html>
 
-<html xmlns="http://www.w3.org/1999/xhtml">
+<html>
 
 <head>
-<title>Simulazione di sistemi quantistici assistita dal calcolatore</title>
+<title>Simulated evolution and graphical representation of quantum systems</title>
 <!-- metadata -->
 
 <meta http-equiv="Content-Type" content="text/html;charset=utf-8" />
 
 <meta name="generator" content="S5" />
 <meta name="version" content="S5 1.1" />
-<meta name="presdate" content="20080717" />
+<!-- <meta name="presdate" content="20080717" /> -->
 <meta name="author" content="Guido De Rosa" />
 <meta name="company" content="Universit&agrave; degli Studi di Napoli Federico II - Dipartimento di Scienze Fisiche" />
 <!-- S5 configuration parameters -->
@@ -42,17 +42,22 @@
   <div id="currentSlide"><!-- DO NOT EDIT --></div>
   <div id="header"></div>
   <div id="footer">
-    <h1>Universit&agrave; degli Studi di Napoli Federico II - Dip. di Scienze Fisiche - 17 luglio 2008</h1>
-    <h2 style="font-size:0.8em;">Simulazione di sistemi quantistici assistita dal calcolatore</h2>
+    Originally presented at University of Naples, Dept. of Physics, 17th Jul 2008
+    <!--
+      <h1>Universit&agrave; degli Studi di Napoli Federico II - Dip. di Scienze Fisiche - 17 luglio 2008</h1>
+      <h2 style="font-size:0.8em;">Simulazione di sistemi quantistici assistita dal calcolatore</h2>
+    -->
   </div>
 </div>
 
 <div class="presentation">
 
   <div class="slide">
-    <h1>Simulazione di sistemi quantistici assistita dal calcolatore</h1>
-    <h2>Relatori: prof. Fedele Lizzi, dott.ssa Ofelia Pisanti</h2>
-    <h2>Correlatore: prof. Renato Fedele</h2>
+    <h1>
+      Symbolic/numeric simulation of simple quantum systems
+      (and the problem of their graphical representation)
+    </h1>
+    <h2>Supervisors: Prof. Fedele Lizzi, Dr. Ofelia Pisanti</h2>
     <h3>Guido De Rosa</h3>
     <h4>Universit&agrave; degli Studi di Napoli Federico II</h4>
     <div style="margin:0.4em 0 0 0; padding:0; text-align:right; font-style: italic; font-size:small;">
@@ -66,39 +71,42 @@
   </div>
 
   <div class="slide">
-    <h1>Intro</h1>
-    <ul class="incremental">
+    <h1>Introduction</h1>
+    <ul style="font-size:130%">
       <li>
-        È stata simulata l’evoluzione temporale di due sistemi quantistici
-        <ol class="incremental">
-          <li>barriera di potenziale 1D con effetto tunnel</li>
-          <li>buca infinita in due dimensioni</li>
-        </ol>
+        Time evolution of two simple systems:
+        <ul class="">
+          <li>1-dim barrier, with tunnelling</li>
+          <li>2-dim particle in a box</li>
+        </ul>
       </li>
-      <li>con l’usuale rappresentazione nello spazio delle posizioni, ma...</li>    </ul>
-  </div>
-
-  <div class="slide">
-    <h1>Intro</h1>
-    <ul>
-      <li>Tipicamente, si rappresenta il <strong>modulo quadro</strong> della funzione d’onda</li>
-      <li class="incremental">In questo lavoro è rappresentata graficamente la funzione <strong>complessa</strong></li>
+      <li>&ldquo;Usual&rdquo; illustration in position space but...</li>
     </ul>
   </div>
 
   <div class="slide">
-    <h1>Perché è importante?</h1>
+    <h1>Graphical representation</h1>
     <ul class="incremental">
+      <li>|&psi;(x)|<sup>2</sup> ? <em>but some loss of information...</em> </li>
+      <li>Re, Im ? <em>but you need two graphs... counterintuitive...</em></li>
+      <li>|&psi;|<sup>2</sup>, <em>arg </em>&psi; in one graphics would likely express the essential physics!</li>
+    </ul>
+  </div>
+
+  <div class="slide">
+    <h1>Why <em>arg</em> matters</h1>
+    <ul class="incremental">
+      <li class="incremental">A <em>global</em> phase factor is irrelevant but phase shifts <em>are relevant</em></li>
       <li>
-        Un semplice esempio
+        Two wavefunctions
         <p><img src="img/eq/sameModulus.gif" class="formula incremental"/></p>
       </li>
-      <li>stesso modulo (quadro)</li>
-      <li>stessa distribuzione di probabilità per la posizione</li>
+      <li>same (squared) modulus</li>
+      <li>same position probability distribution</li>
       <li>
-        <strong>diversa</strong> distribuzione di probabilità per il momento lineare
+        <strong>not same</strong> momentum!
         <ul>
-          <li class="info">proprietà di traslazione della trasformata di Fourier...</li>
+          <li class="info">Fourier transform, shift property</li>
           <p><img src="img/eq/momentumShift.gif" class="formula2 incremental"/></p>
         </ul>
       </li>
@@ -106,16 +114,16 @@
   </div>
 
   <div class="slide">
-    <h1>Perché è importante?</h1>
+    <h1>Why <em>arg</em> matters (continued)</h1>
     <ul>
       <li> ...
         <ul>
           <li class="info">
-            proprietà di traslazione della trasformata di Fourier
-            <ul style="font-size:180%;">
+            <em>Fourier transform, momentum shift</em>
+            <ul style="font-size:180%;margin-top:0.8em">
               <li><img src="img/eq/momentumShift.gif" class="formula2"/></li>
               <li><img src="img/eq/momentumShift_int.gif" class="formula3"/></li>
-              <li><img src="img/eq/momentumShift_squareMod.gif" class="formula1" style="width:70%;"/></li>
+              <li style="font-size:70%;">Generally, <img src="img/eq/momentumShift_squareMod.gif" style="height:1em"/></li>
             </ul>
           </li>
         </ul>
@@ -124,41 +132,38 @@
   </div>
 
   <div class="slide">
-    <h1 class="vlongtitle">Rappresentazione grafica di funzioni complesse</h1>
-    <ul class="incremental">
+    <h1 class="vlongtitle">Graphical representation</h1>
+    <ul style="">
       <li>
-        Per un sistema unidimensionale si traccia un grafico 3D: l’asse delle <em>x</em>
-        per la variabile indipendente; gli assi <em>y</em> e <em>z</em> per parte reale
-        e immaginaria della funzione
-        <ul class="info incremental">
+        1D system: we use a 3 dimensional graph
+        <ul  class="incremental" >
+          <li>One axis for the independent (obviously real) variable <em>x</em></li>
+          <li>The other two axis for Re &psi; and Im &psi;</li>
+          <li>exp(i<i>kx</i>) is represented as a helix</li>
+          <li>A real function lies on a plane</li>
           <li>
-            Nell’esempio:
+            In the example:
             <img
               src="img/eq/expichix.gif"
               class="formula incremental"
-              style="border:1px #db0 solid; padding:2px;"/>
+              style="border:1px #db0 solid; padding:2px;"/>,
+            <span class="incremental">
+            A gaussian
             <img
               src="img/eq/psix.gif"
               class="formula incremental"
-              style="border:1px blue solid; padding:2px;">
+              style="border:1px blue solid; padding:2px;">,
+            </span>
+            <span class="incremental">
+            and their product
             <img
               src="img/eq/expichixpsix.gif"
               class="formula incremental"
               style="border:1px red solid; padding:2px;"
             />
-            <ul class="incremental">
-              <li><i>&chi;</i> è dell’ordine delle centinaia</li>
-              <li>
-                <i>&psi;</i> è una gaussiana la cui larghezza è
-                nell’ordine dell’unità
-              </li>
-              <li>
-                <i>&psi;</i> è reale =&gt; giace nel piano <i>xy</i>
-                secondo questa rappresentazione
-              </li>
-            </ul>
+            </span>
           </li>
-          <div style="text-align:center;">
+          <p>
             <a
               href="img/graph/gaussian.jpg"
               target="_blank"
@@ -168,24 +173,23 @@
                 style="margin:0.7em auto;"
               />
             </a>
-          </div>
+          </li>
         </ul>
       </li>
     </ul>
   </div>
 
   <div class="slide">
-    <h1 class="vlongtitle">Rappresentazione grafica di funzioni complesse</h1>
+    <h1 class="vlongtitle">Graphical representation</h1>
     <ul>
       <li>
-        Per un sistema <em>bi</em>dimensionale, si traccia l’usuale grafico del
-        modulo (o del suo quadrato)
+        2D system: we graph |&psi;|<sup>2</sup> &ldquo;as usual&rdquo;
       </li>
       <li class="incremental">
-        L’informazione che manca è l’argomento complesso: si adopera una scala di colori
+        But we use <em>colors</em> to represent the complex arg
         <ul class="info">
           <li class="incremental">
-            è importante identificare <em>+&pi;</em> e <em>-&pi;</em> per rendere la continuità dell’argomento
+            Important: <em>+&pi;</em> and <em>-&pi;</em> need to be represented with the same color
           </li>
         </ul>
       </li>
@@ -201,22 +205,17 @@
   </div>
 
   <div class="slide">
-    <h1 class="vlongtitle">Rappresentazione grafica di funzioni complesse</h1>
+    <h1 class="vlongtitle">Sorry, I lied (digression)</h1>
     <ul>
       <li class="info">
-        Queste tecniche possono essere utili anche per rappresentare funzioni complesse di variabile complessa
-        (funzioni analitiche, funzioni speciali...)
-        <ul>
-          <li>lungo una curva, o una retta,</li>
-          <li>o in un dominio del piano complesso</li>
-        </ul>
+        This technique is also useful to represent functions <em>of complex variable</em
       </li>
       <li>
-        Nella slide precedente: la funzione <em>zeta di Riemann</em>
+        Previous slide was: <em>Riemann’s &zeta; </em>
         <p><img src="img/eq/z.gif" class="formula2"/></p>
       </li>
       <li class="incremental">
-        Un esempio come un altro... ;-)
+        Just an example ;-)
       </li>
     </ul>
   </div>
