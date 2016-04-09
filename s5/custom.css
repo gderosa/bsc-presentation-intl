@@ -1,18 +1,18 @@
 
 
-/* 
+/*
 compare to ui/default/pretty.css, where:
   .slide h1 {
     text-tramsform:capitalize;
     font-size: 150%;
-  }  
+  }
 */
 .slide h1 {text-transform:none;}
 .slide h1.longtitle { /* new classes avoid overflowing */
-  font-size:125%; 
+  font-size:125%;
 }
 .slide h1.vlongtitle { /* new classes avoid overflowing */
-  font-size:100%; 
+  font-size:100%;
 }
 /* */
 
@@ -33,7 +33,7 @@ compare to ui/default/pretty.css, where:
 }*/
 
 .video-options {
-  font-size: 0.4em; 
+  font-size: 0.4em;
   font-family: Helvetica, Arial, sans-serif;
   font-style: italic;
 /*  margin: 0.1em 0;   */
@@ -43,7 +43,7 @@ compare to ui/default/pretty.css, where:
 
 
 /* .preview-with-showclose {
-  margin-top:24px; 
+  margin-top:24px;
 } */
 
 .hVlog {
@@ -67,9 +67,9 @@ img.formula15,
 img.formula2,
 img.formula25,
 img.formula3,
-img.formula4  
+img.formula4
 {
-  margin: 0 0.35em;
+  margin: 0.30em 0.35em;
   vertical-align: middle;
 }
 
@@ -92,8 +92,8 @@ li img {vertical-align:middle;}
 
 ul li {
   /* list-style:none; */
-  margin:0; 
-  padding:0; 
+  margin:0;
+  padding:0;
   /* font-size:90%; */
 }
 
@@ -107,7 +107,7 @@ ul ol {
 }
 
 .part {
-  text-align:center; 
+  text-align:center;
   margin-top:4em;
   font-size:130%;
 }
