@@ -54,7 +54,7 @@
 
   <div class="slide">
     <h1>
-      Symbolic/numeric simulation of simple quantum systems
+      Symbolic/numerical simulation of simple quantum systems
       (and the problem of their graphical representation)
     </h1>
     <h2>Supervisors: Prof. Fedele Lizzi, Dr. Ofelia Pisanti</h2>
@@ -139,26 +139,27 @@
         <ul  class="incremental" >
           <li>One axis for the independent (obviously real) variable <em>x</em></li>
           <li>The other two axis for Re &psi; and Im &psi;</li>
+          <li>|&psi;| is the distance from the <em>x</em> axis</li>
           <li>exp(i<i>kx</i>) is represented as a helix</li>
           <li>A real function lies on a plane</li>
           <li>
             In the example:
             <img
               src="img/eq/expichix.gif"
-              class="formula incremental"
+              class="formula"
               style="border:1px #db0 solid; padding:2px;"/>,
-            <span class="incremental">
+            <span class="">
             A gaussian
             <img
               src="img/eq/psix.gif"
-              class="formula incremental"
+              class="formula"
               style="border:1px blue solid; padding:2px;">,
             </span>
-            <span class="incremental">
+            <span class="">
             and their product
             <img
               src="img/eq/expichixpsix.gif"
-              class="formula incremental"
+              class="formula"
               style="border:1px red solid; padding:2px;"
             />
             </span>
@@ -399,14 +400,15 @@
   </div>
 
   <div class="slide">
-    <div class="part">Gli strumenti e l’implementazione</div>
+    <div class="part">Implementation and tools</div>
   </div>
 
   <div class="slide">
     <h1 style="font-style:italic;">Free software, open standards</h1>
     <ul>
       <li>
-        <img src="img/logo/maxima.jpg" class="tools-logo" style="float:right;"/>        <strong>Maxima</strong>: calcolo simbolico e numerico
+        <img src="img/logo/maxima.jpg" class="tools-logo" style="float:right;"/>
+        <strong>Maxima</strong>: symbolic/numerical computation, outputs datafiles
         <ul>
           <li>
             <a style="font-family: monospace" target="_blank" href="http://maxima.sourceforge.net/">http://maxima.sourceforge.net/</a>
@@ -415,7 +417,7 @@
       </li>
       <li>
         <img src="img/logo/gnuplot.jpg" class="tools-logo" style="float:right;"/>
-        <strong>Gnuplot</strong>: per i grafici
+        <strong>Gnuplot</strong>: from datafiles into plots
         <ul>
           <li>
             <a style="font-family: monospace" target="_blank" href="http://www.gnuplot.info/">http://www.gnuplot.info/</a>
@@ -424,7 +426,7 @@
       </li>
       <li>
         <img src="img/logo/perl.jpg" class="tools-logo" style="float:right;"/>
-        <strong>Perl</strong>: come “glue language”
+        <strong>Perl</strong>: as a “glue language”
         <ul>
           <li>
             <a style="font-family: monospace" target="_blank" href="http://www.perl.org/">http://www.perl.org/</a>
@@ -433,7 +435,7 @@
       </li>
       <li>
         <img src="img/logo/mplayer.jpg" class="tools-logo" style="float:right;"/>
-        <strong>MEncoder</strong>: per una prima codifica video
+        <strong>MEncoder</strong>: from plot images to videos
         <ul>
           <li>
             <a style="font-family: monospace" target="_blank" href="http://www.mplayerhq.hu/">http://www.mplayerhq.hu/</a>
@@ -441,7 +443,8 @@
         </ul>
       </li>
       <li>
-        <img src="img/logo/theora.jpg" class="tools-logo" style="float:right;"/>        <strong>OGG/Theora</strong>: come formato per la distribuzione
+        <img src="img/logo/theora.jpg" class="tools-logo" style="float:right;"/>
+        <strong>OGG/Theora</strong>: as a media distribution standard
         <ul>
           <li>
             <a style="font-family: monospace" target="_blank" href="http://theora.org/">http://theora.org/</a>
@@ -452,28 +455,28 @@
   </div>
 
   <div class="slide">
-    <h1>Barriera ed eff. tunnel: il codice</h1>
+    <h1>Barrier / tunneling: code</h1>
     <ul>
       <li>
-        <code><a href="code/tunnel.mxm.html" target="_blank">tunnel.mxm</a></code>: codice <em>Maxima</em>
+        <code><a href="code/tunnel.mxm.html" target="_blank">tunnel.mxm</a></code>: code <em>Maxima</em>
         <ul>
           <li>
-            Soluzione <strong>analitica</strong> del sistema lineare (condiz. al contorno)
+            <strong>Analytical</strong> solution of the linear system (boundary cond.)
             <img src="img/eq/linsys.gif" class="formula4" style="padding:0.25em; vertical-align:top;"/>
           </li>
           <li>
-            Sovrapposizione - <strong>numerica</strong> - di autostati dell’energia
+            <strong>Numerical</strong> superposition of eigenfunctions
             <img src="img/eq/packet_t.gif" class="formula1" style="height:1.6em; margin-top:0.33em;"/>
           </li>
         </ul>
       </li>
       <li>
-        <code><a href="code/sample-tunnel.dat.html" target="_blank">tunnel.dat</a></code>: estratto del file di dati prodotto (~20&nbsp;MB)
+        <code><a href="code/sample-tunnel.dat.html" target="_blank">tunnel.dat</a></code>: a short excerpt (of the datafile being ~20&nbsp;MB)
       </li>
       <li>
-        <code><a href="code/anim+encode.pl.html" target="blank">anim+encode.pl</a></code>: script Perl
+        <code><a href="code/anim+encode.pl.html" target="blank">anim+encode.pl</a></code>: Perl script
         <ul>
-          <li>gestisce il file di dati, invoca i programmi per il disegno e la codifica video
+          <li>loop through the datafile, invokes plotter and video encoder
         </ul>
       </li>
     </ul>
