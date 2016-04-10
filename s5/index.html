@@ -12,7 +12,7 @@
 <meta name="version" content="S5 1.1" />
 <!-- <meta name="presdate" content="20080717" /> -->
 <meta name="author" content="Guido De Rosa" />
-<meta name="company" content="Universit&agrave; degli Studi di Napoli Federico II - Dipartimento di Scienze Fisiche" />
+
 <!-- S5 configuration parameters -->
 <meta name="defaultView" content="slideshow" />
 <meta name="controlVis" content="hidden" />
@@ -42,11 +42,7 @@
   <div id="currentSlide"><!-- DO NOT EDIT --></div>
   <div id="header"></div>
   <div id="footer">
-    Originally presented at University of Naples, Dept. of Physics, 17th Jul 2008
-    <!--
-      <h1>Universit&agrave; degli Studi di Napoli Federico II - Dip. di Scienze Fisiche - 17 luglio 2008</h1>
-      <h2 style="font-size:0.8em;">Simulazione di sistemi quantistici assistita dal calcolatore</h2>
-    -->
+    Simulated evolution and graphical representation of quantum systems (UniNa/UCC 2008, 2016)
   </div>
 </div>
 
@@ -54,19 +50,18 @@
 
   <div class="slide">
     <h1>
-      Symbolic/numeric simulation of simple quantum systems
+      Symbolic/numerical simulation of simple quantum systems
       (and the problem of their graphical representation)
     </h1>
-    <h2>Supervisors: Prof. Fedele Lizzi, Dr. Ofelia Pisanti</h2>
     <h3>Guido De Rosa</h3>
-    <h4>Universit&agrave; degli Studi di Napoli Federico II</h4>
-    <div style="margin:0.4em 0 0 0; padding:0; text-align:right; font-style: italic; font-size:small;">
+    <p style="font-size:80%">
+      Based on a B.Sc. project presented at Univ. of Naples, Jul 2008, under the
+      supervision of Prof. F. Lizzi and Dr. O. Pisanti, and further developments.
+    </p>
+    <div style="margin:0.4em 0 0 0; padding:0; text-align:right; font-style: italic; font-size:60%">
       presentation powered by <a href="http://meyerweb.com/eric/tools/s5/">S5</a>
       <br/>
-      <span style="font-size:x-small;">
-        and
-        <a href="http://www.artofproblemsolving.com/LaTeX/AoPS_L_TeXer.php">TeXer</a>
-      </span>
+      and <a href="https://www.artofproblemsolving.com/texer">TeXer</a>
     </div>
   </div>
 
@@ -86,7 +81,7 @@
 
   <div class="slide">
     <h1>Graphical representation</h1>
-    <ul class="incremental">
+    <ul>
       <li>|&psi;(x)|<sup>2</sup> ? <em>but some loss of information...</em> </li>
       <li>Re, Im ? <em>but you need two graphs... counterintuitive...</em></li>
       <li>|&psi;|<sup>2</sup>, <em>arg </em>&psi; in one graphics would likely express the essential physics!</li>
@@ -95,11 +90,11 @@
 
   <div class="slide">
     <h1>Why <em>arg</em> matters</h1>
-    <ul class="incremental">
-      <li class="incremental">A <em>global</em> phase factor is irrelevant but phase shifts <em>are relevant</em></li>
+    <ul>
+      <li>A <em>global</em> phase factor is irrelevant but phase shifts <em>are relevant</em></li>
       <li>
         Two wavefunctions
-        <p><img src="img/eq/sameModulus.gif" class="formula incremental"/></p>
+        <p><img src="img/eq/sameModulus.gif" class="formula"/></p>
       </li>
       <li>same (squared) modulus</li>
       <li>same position probability distribution</li>
@@ -107,7 +102,7 @@
         <strong>not same</strong> momentum!
         <ul>
           <li class="info">Fourier transform, shift property</li>
-          <p><img src="img/eq/momentumShift.gif" class="formula2 incremental"/></p>
+          <p><img src="img/eq/momentumShift.gif" class="formula2"/></p>
         </ul>
       </li>
     </ul>
@@ -139,6 +134,7 @@
         <ul  class="incremental" >
           <li>One axis for the independent (obviously real) variable <em>x</em></li>
           <li>The other two axis for Re &psi; and Im &psi;</li>
+          <li>|&psi;| is the distance from the <em>x</em> axis</li>
           <li>exp(i<i>kx</i>) is represented as a helix</li>
           <li>A real function lies on a plane</li>
           <li>
@@ -147,14 +143,14 @@
               src="img/eq/expichix.gif"
               class="formula incremental"
               style="border:1px #db0 solid; padding:2px;"/>,
-            <span class="incremental">
+            <span class="">
             A gaussian
             <img
               src="img/eq/psix.gif"
               class="formula incremental"
               style="border:1px blue solid; padding:2px;">,
             </span>
-            <span class="incremental">
+            <span class="">
             and their product
             <img
               src="img/eq/expichixpsix.gif"
@@ -221,14 +217,14 @@
   </div>
 
   <div class="slide">
-    <div class="part">Barriera unidimensionale ed effetto tunnel</div>
+    <div class="part">Tunneling through a 1-dim barrier</div>
   </div>
 
   <div class="slide">
-    <h1 class="longtitle">Barriera di potenziale in una dimensione</h1>
+    <h1 class="longtitle">1D potential barrier</h1>
     <ul>
       <li>
-        <img src="img/eq/barrier.gif" class="formula2"/>
+        <img src="img/eq/barrier.png" class="formula2"/>
         <a href="img/graph/barrier-potential_large.png" target="_blank">
           <img
             src="img/graph/barrier-potential.png"
@@ -238,41 +234,43 @@
         </a>
       </li>
       <li class="info incremental">
-        Eq. di Schrödinger indipendente dal tempo
+        Time-indep. Schrödinger equation
         <p><img src="img/eq/schroedinger.gif" class="formula2 incremental"/></p>      </li>
       <li class="incremental">
-        e sue soluzioni per <i>E &lt; V</i>
-        <img src="img/eq/barrier-solutions-lowE.gif" class="formula3 incremental" style="margin:0.5em 0 0 0.5em; border:1px solid; padding:0.2em;"/>
+        and solutions for <i>E &lt; V</i>
+        <img src="img/eq/barrier-solutions-lowE.png" class="formula3 incremental" style="margin:0.5em 0 0 0.5em; border:1px solid; padding:0.2em;"/>
       </li>
     </ul>
   </div>
 
 
   <div class="slide">
-    <h1 class="longtitle">Barriera di potenziale in una dimensione</h1>
-    <img src="img/eq/barrier-solutions-lowE.gif" class="formula3" style="margin-left:0.5em; padding:0.2em;"/> con <img src="img/eq/barrier-solutions-lowE_spec.gif" class="formula2" style="margin:0.3  em;"/>
-    <ul class="incremental">
-      <li>Per ogni <i>E</i>, sei incognite: <i>A1, A2, B1, B2, C1, C2</i></li>
-      <li>Possimo imporre <i>A1 = 1</i>, <em>“senza ledere la generalità”...</em></li>
-      <li><em>“La particella proviene da sinistra”</em> => imponiamo <i>C2&nbsp;=&nbsp;0</i></li>
-      <li>Le incognite si son ridotte a quattro</li>
+    <h1 class="longtitle">1D potential barrier</h1>
+    <img src="img/eq/barrier-solutions-lowE.png" class="formula3" style="margin-left:0.5em; padding:0.2em;"/> with <img src="img/eq/barrier-solutions-lowE_spec.gif" class="formula2" style="margin:0.3em;"/>
+    <ul>
+      <li>For each <i>E</i>, six unknowns: <i>A1, A2, B1, B2, C1, C2</i></li>
+      <li>We can set <i>A1 = 1</i>, <em>“with no lack of generality”...</em></li>
+      <li><em>“Particle moving from left to right”</em> => let&rsquo;s set <i>C2&nbsp;=&nbsp;0</i></li>
+      <li>Problem reduced to four unknowns</li>
       </li>
     </ul>
   </div>
 
   <div class="slide">
-    <h1 class="longtitle">Barriera di potenziale in una dimensione</h1>
+    <h1 class="longtitle">1D potential barrier</h1>
     <ul>
       <li>
-        La condizione di continuità della funzione d’onda e della sua derivata in
-        <i>x1, x2</i> equivale a 4 equazioni lineari (nelle incognite <i>A2, B1, B2, C1</i>)
+        Continuity of &psi; and its derivative in
+        <i>x1, x2</i> implies 4 linear equations (on <i>A2, B1, B2, C1</i>)
         <p><img src="img/eq/linsys.gif" class="formula4" style="border:1px solid; padding:0.25em;"/></p>
+         with <img src="img/eq/barrier-solutions-lowE_spec.gif" class="formula1" style="margin:0.3em;"/>
+      </li>
       <li class="incremental">
-        Per ogni <i>E</i>, un sistema lineare, che facciamo risolvere <em>simbolicamente</em>
-        a <strong>Maxima</strong> <img src="img/logo/maxima.png" class="noincremental">
+        For each <i>E</i>, a linear system, solved <em>symbolically</em>
+        with <strong>Maxima</strong> <img src="img/logo/maxima.jpg" class="noincremental">
         <ul>
           <li>
-            Un <em>Computer Algebra System</em> libero / <em>open source</em> <br/>
+            Open source <em>Computer Algebra System</em><br/>
             <a style="font-family: monospace" target="_blank" href="http://maxima.sourceforge.net/">http://maxima.sourceforge.net/</a>
           </li>
         </ul>
@@ -280,34 +278,51 @@
     </ul>
   </div>
 
+  <!--
   <div class="slide">
-    <h1 class="longtitle">Barriera 1D: calcolo numerico e simbolico</h1>
+    <h1 class="longtitle">1D potential barrier: explicit <em>symbolic</em> solution</h1>
     <ul>
       <li>
-        Dal calcolo <em>simbolico</em> di A2, B1, B2, C1 si ottiene:
+        Specially if we explicit <img src="img/eq/barrier-solutions-lowE_spec.gif" class="formula1" style="margin:0.3em;"/>,
+        symbolic solution of the linear system can be tedious, with lots to simplify etc.
+      </li>
+      <li>
+        For example (just a Maxima &ldquo;dump&rdquo;):
+        <img src="img/eq/barrier_linsolve_explicit_A2.png" style="margin-top:0.3em" class="formula2">
+      </li>
+      <li>
+        and B<sub>1</sub>, B<sub>2</sub> and C<sub>1</sub> ...
+      </li>
+    </ul>
+  </div>
+  -->
+
+  <div class="slide">
+    <h1 class="longtitle">1D potential barrier: superposition of eigenstates</h1>
+    <ul>
+      <li>
+        So now we know everything explicitly of the below (thanks to <em>symbolic</em> computation):
         <p><img src="img/eq/psi_E.gif" class="formula3"></p>
       </li>
       <li>
-        L’evoluzione temporale di ciascun autostato è nota:
+        Time evolution of each eigenstate is simply
         <p><img src="img/eq/barrier_eigenf_evolution.gif" class="formula1"></p>
-
       </li>
       <li>
-        Sovrapposizione (<em>numerica</em>) di autofunzioni, con la loro evoluzione temporale:
-          <p><img src="img/eq/barrier_superpos.gif" class="formula2"></p>
+        Now we perform a superposition (computed <em>numerically</em>):
+        <p><img src="img/eq/barrier_superpos.gif" class="formula2"></p>
       </li>
     </ul>
   </div>
 
   <div class="slide">
-    <h1 class="longtitle">Barriera 1D: calcolo numerico e simbolico</h1>
+    <h1 class="longtitle">1D potential barrier: superposition of eigenstates</h1>
     <ul>
       <li>
-        Sovrapposizione (<em>numerica</em>) di autofunzioni, con la loro evoluzione temporale
         <p><img src="img/eq/barrier_superpos.gif" class="formula2"></p>
         <ul>
           <li>
-            Si è scelto
+            Our choice of parameters:
             <p><img src="img/eq/gaussian.gif" class="formula2"></p>
             <p><img src="img/eq/barrier_superpos_E0.gif" class="formula2"></p>
             <p><img src="img/eq/barrier_superpos_spread_E.gif" class="formula2"></p>
@@ -318,14 +333,13 @@
   </div>
 
   <div class="slide">
-    <div class="part">Barriera ed effetto tunnel: i risultati</div>
+    <div class="part">Results</div>
   </div>
 
   <div class="slide">
-    <h1>Barriera di potenziale: risultati</h1>
+    <h1>Barrier (tunneling): results</h1>
     <h2>
-      L’effetto tunnel e un dettaglio del comportamento in prossimità
-      della barriera
+      Tunnel effect and a detailed view near barrier
     </h2>
     <div class="hVlog" style="width:40%; height:40%; float:left; margin:0.5em;">
 			<a
@@ -383,14 +397,15 @@
   </div>
 
   <div class="slide">
-    <div class="part">Gli strumenti e l’implementazione</div>
+    <div class="part">Implementation and tools</div>
   </div>
 
   <div class="slide">
     <h1 style="font-style:italic;">Free software, open standards</h1>
     <ul>
       <li>
-        <img src="img/logo/maxima.jpg" class="tools-logo" style="float:right;"/>        <strong>Maxima</strong>: calcolo simbolico e numerico
+        <img src="img/logo/maxima.jpg" class="tools-logo" style="float:right;"/>
+        <strong>Maxima</strong>: symbolic/numerical computation, outputs datafiles
         <ul>
           <li>
             <a style="font-family: monospace" target="_blank" href="http://maxima.sourceforge.net/">http://maxima.sourceforge.net/</a>
@@ -399,7 +414,7 @@
       </li>
       <li>
         <img src="img/logo/gnuplot.jpg" class="tools-logo" style="float:right;"/>
-        <strong>Gnuplot</strong>: per i grafici
+        <strong>Gnuplot</strong>: from datafiles into plots
         <ul>
           <li>
             <a style="font-family: monospace" target="_blank" href="http://www.gnuplot.info/">http://www.gnuplot.info/</a>
@@ -408,7 +423,7 @@
       </li>
       <li>
         <img src="img/logo/perl.jpg" class="tools-logo" style="float:right;"/>
-        <strong>Perl</strong>: come “glue language”
+        <strong>Perl</strong>: as a “glue language”
         <ul>
           <li>
             <a style="font-family: monospace" target="_blank" href="http://www.perl.org/">http://www.perl.org/</a>
@@ -417,7 +432,7 @@
       </li>
       <li>
         <img src="img/logo/mplayer.jpg" class="tools-logo" style="float:right;"/>
-        <strong>MEncoder</strong>: per una prima codifica video
+        <strong>MEncoder</strong>: from plot images to videos
         <ul>
           <li>
             <a style="font-family: monospace" target="_blank" href="http://www.mplayerhq.hu/">http://www.mplayerhq.hu/</a>
@@ -425,7 +440,8 @@
         </ul>
       </li>
       <li>
-        <img src="img/logo/theora.jpg" class="tools-logo" style="float:right;"/>        <strong>OGG/Theora</strong>: come formato per la distribuzione
+        <img src="img/logo/theora.jpg" class="tools-logo" style="float:right;"/>
+        <strong>OGG/Theora</strong>: as a media distribution standard
         <ul>
           <li>
             <a style="font-family: monospace" target="_blank" href="http://theora.org/">http://theora.org/</a>
@@ -436,28 +452,28 @@
   </div>
 
   <div class="slide">
-    <h1>Barriera ed eff. tunnel: il codice</h1>
+    <h1>Barrier / tunneling: code</h1>
     <ul>
       <li>
-        <code><a href="code/tunnel.mxm.html" target="_blank">tunnel.mxm</a></code>: codice <em>Maxima</em>
+        <code><a href="code/tunnel.mxm.html" target="_blank">tunnel.mxm</a></code>: code <em>Maxima</em>
         <ul>
           <li>
-            Soluzione <strong>analitica</strong> del sistema lineare (condiz. al contorno)
+            <strong>Analytical</strong> solution of the linear system (boundary cond.)
             <img src="img/eq/linsys.gif" class="formula4" style="padding:0.25em; vertical-align:top;"/>
           </li>
           <li>
-            Sovrapposizione - <strong>numerica</strong> - di autostati dell’energia
+            <strong>Numerical</strong> superposition of eigenfunctions
             <img src="img/eq/packet_t.gif" class="formula1" style="height:1.6em; margin-top:0.33em;"/>
           </li>
         </ul>
       </li>
       <li>
-        <code><a href="code/sample-tunnel.dat.html" target="_blank">tunnel.dat</a></code>: estratto del file di dati prodotto (~20&nbsp;MB)
+        <code><a href="code/sample-tunnel.dat.html" target="_blank">tunnel.dat</a></code>: a short excerpt (of the datafile being ~20&nbsp;MB)
       </li>
       <li>
-        <code><a href="code/anim+encode.pl.html" target="blank">anim+encode.pl</a></code>: script Perl
+        <code><a href="code/anim+encode.pl.html" target="blank">anim+encode.pl</a></code>: Perl script
         <ul>
-          <li>gestisce il file di dati, invoca i programmi per il disegno e la codifica video
+          <li>loop through the datafile, invokes plotter and video encoder
         </ul>
       </li>
     </ul>
