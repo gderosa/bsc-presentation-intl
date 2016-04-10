@@ -50,8 +50,9 @@
 
   <div class="slide">
     <h1>
-      Symbolic/numerical simulation of simple quantum systems
-      (and the problem of their graphical representation)
+      Simulation
+      and graphical representation
+      of quantum systems
     </h1>
     <h3>Guido De Rosa</h3>
     <p style="font-size:80%">
@@ -132,7 +133,7 @@
       <li>
         1D system: we use a 3 dimensional graph
         <ul  class="incremental" >
-          <li>One axis for the independent (obviously real) variable <em>x</em></li>
+          <li>One axis for the independent variable <em>x</em></li>
           <li>The other two axis for Re &psi; and Im &psi;</li>
           <li>|&psi;| is the distance from the <em>x</em> axis</li>
           <li>exp(i<i>kx</i>) is represented as a helix</li>
@@ -227,18 +228,17 @@
         <img src="img/eq/barrier.png" class="formula2"/>
         <a href="img/graph/barrier-potential_large.png" target="_blank">
           <img
-            src="img/graph/barrier-potential.png"
-            class="incremental"
-            style=" height:4em; vertical-align:middle; border-width:0;"
+            src="img/graph/barrier-potential_large.png"
+            style=" height:8em; float:right; border-width:0;"
             />
         </a>
       </li>
-      <li class="info incremental">
+      <li class="info">
         Time-indep. Schrödinger equation
-        <p><img src="img/eq/schroedinger.gif" class="formula2 incremental"/></p>      </li>
-      <li class="incremental">
+        <p><img src="img/eq/schroedinger.gif" class="formula2"/></p>      </li>
+      <li>
         and solutions for <i>E &lt; V</i>
-        <img src="img/eq/barrier-solutions-lowE.png" class="formula3 incremental" style="margin:0.5em 0 0 0.5em; border:1px solid; padding:0.2em;"/>
+        <img src="img/eq/barrier-solutions-lowE.png" class="formula3" style="margin:0.5em 0 0 0.5em; border:1px solid; padding:0.2em;"/>
       </li>
     </ul>
   </div>
@@ -480,32 +480,31 @@
   </div>
 
   <div class="slide">
-    <div class="part">Buca bidimensionale (V &rarr; &infin;)</div>
+    <div class="part">2D Well (V &rarr; &infin;)</div>
   </div>
 
   <div class="slide">
-    <h1>Buca bidimensionale (V &rarr; &infin;)</h1>
+    <h1>2D particle-in-a-box</h1>
     <ul>
       <li>
-        <img src="img/eq/2Dwell_potential.gif" class="formula2"/>
+        <img src="img/eq/2Dwell_potential.png" class="formula2"/>
         <a href="img/graph/2DWell.jpg" target="_blank">
           <img src="img/graph/2DWell.jpg" style="height:3.3em;"/>
 
         </a>
       </li>
       <li>
-        Scelta delle unità e parametri del problema
-        <ul>
-          <li><img src="img/eq/a_is_halfpi.gif" class="formula15"/></li>
-          <li><img src="img/eq/2DWell_unit.gif" class="formula15"/</li>
-        </ul>
+        &ldquo;Natural units&rdquo;
+        &nbsp;
+        <img src="img/eq/a_is_halfpi.gif" class="formula13"/>,
+        &nbsp;
+        <img src="img/eq/2DWell_unit.gif" class="formula13"/>
       </li>
       <li>
-        Hamiltoniana e autofunzioni
+        Hamiltonian and eigenstates
           <a
               href="img/graph/2DWell_eigenf.jpg"
               target="_blank"
-              title="Autofunzione della buca 2D a pareti infinite, per m=5 e n=2"
           >
               <img src="img/graph/2DWell_eigenf.jpg" style="float:right; height:4em;">
           </a>
@@ -515,7 +514,7 @@
           <li>
             <img src="img/eq/2DWell_eigenf.gif" class="formula1"/>
             <ul>
-              <li><img src="img/eq/2DWell_eigenfuncs_oddeven.gif" class="formula25"/></li>
+              <li><img src="img/eq/2DWell_eigenfuncs_oddeven.png" class="formula3"/></li>
             </ul>
           </li>
         </ul>
@@ -524,16 +523,16 @@
   </div>
 
   <div class="slide">
-    <h1 class="vlongtitle">Buca 2D: spettro dell’energia ed evoluzione temporale</h1>
+    <h1 class="vlongtitle">2D particle-in-a-box: energy spectrum, time evolution</h1>
     <ul>
       <li>
         <img src="img/eq/2DWell_Emn.gif" class="formula"/>
         <ul>
-          <li>infatti <img src="img/eq/2DWell_Emn_proof.gif" class="formula3"></li>
+          <li>indeed <img src="img/eq/2DWell_Emn_proof.gif" class="formula3"></li>
         </ul>
       </li>
       <li>
-        Evoluzione temporale
+        Time evolution:
         <ul>
           <li><img src="img/eq/2DWell_evol.gif" class="formula"/></li>
           <li>
@@ -545,13 +544,13 @@
         </ul>
       </li>
       <li class="incremental">
-        Non resta che “plottare”!
+        That's everything, let's (Gnu)plot and animate!
       </li>
     </ul>
   </div>
 
   <div class="slide">
-    <h1>Buca 2D: i risultati</h1>
+    <h1>2D particle-in-a-box: results</h1>
 
     <!-- function1.gpi -->
     <div class="hVlog" style="float:left; display:inline; margin-right:2px;">
@@ -590,16 +589,16 @@
   </div>
 
   <div class="slide">
-    <h1><i>Let’s (Gnu)plot!</i> - il codice</h1>
+    <h1>2D particle-in-a-box: code</h1>
     <ul>
       <li>
-        <code><a href="iframes/plot.pl.html" target="_blank" title="plot.pl">plot.pl</a></code>: script Perl
+        <code><a href="iframes/plot.pl.html" target="_blank" title="plot.pl">plot.pl</a></code>: Perl script
         <ul>
           <li>
-            <code><a href="iframes/preamble.gpi.html" target="_blank" title="preamble.gpi">preamble.gpi</a></code>: preambolo di impostazioni
+            <code><a href="iframes/preamble.gpi.html" target="_blank" title="preamble.gpi">preamble.gpi</a></code>
           </li>
           <li>
-            definizione di funzioni:
+            function definitions:
             <ul>
               <li>
                 <code><a href="iframes/function1.gpi.html" target="_blank" title="function1.gpi">function1.gpi</a></code>: <img src="img/eq/2Dwell_1.gif">
