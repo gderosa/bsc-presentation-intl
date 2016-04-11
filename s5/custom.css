@@ -81,6 +81,16 @@ img.formula25             {height: 2.77em;}
 img.formula3              {height: 3.3em;}
 img.formula4              {height: 4.4em;}
 
+img.notes {
+  height: 15em;
+  margin-left: 1ex;
+}
+
+img.notes:first-child {
+  margin-left:: none;
+}
+
+
 a img {
   border: 1px dashed;
 }
